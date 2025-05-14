@@ -1,6 +1,6 @@
 # CoatNet
 
-This is the repository that contains source code for the [CoatNet website](https://nerfies.github.io).
+This is the repository that contains source code for the [CoatNet website](https://seize-future.github.io/Coatnet_web/).
 
 
 # Website License
