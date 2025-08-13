@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="A Coarse-to-Fine Multi-modal Detection Framework Based on Deep Learning for Robotic Coating Tasks.">
+  <meta name="keywords" content="Deep learning, RGB-D perception, Seam extraction, Path planning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Coarse-to-Fine Multi-modal Detection Framework Based on Deep Learning for Robotic Coating Tasks</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/Website image/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">A Coarse-to-Fine Multi-modal Detection Framework Based on Deep Learning for Robotic Coating Tasks</h1>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/w-a0VwWQvBk"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Seize-Future/RGBD-Coating-Dataset"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+
+            Automated robotic systems are evolving rapidly in industrial manufacturing. 
+            In robotic seal coating scenarios, while RGB-D based perception is adaptable 
+            for flexible demands, it struggles with achieving high accuracy. 
+          </p>
+                      
+          <p>
+            To address this limitation, we propose a multi-modal visual detection system 
+            for robotic 
+            seam gluing, which employs a coarse-to-fine strategy across 2D and 3D data 
+            modalities. The proposed framework integrates two main components: a 2D Seam 
+            Segmentation & Classification Network (2D-SSCN) for coarse seam identification 
+            at the image level, and a 3D Seam Refinement & Transformation Network (3D-SRTN) 
+            for precise seam refinement at the point cloud level. Specifically, 3D-SRTN 
+            performs local seam point optimization, followed with global transformation 
+            to minimize cumulative coordinate errors. A post-processing procedure is then 
+            designed to generate smooth 6-DoF paths. 
+                        
+          </p>
+          <p>
+            Additionally, we introduce the RGB-D Coating Dataset, specifically tailored for 
+            this task, which includes both 2D 
+            and 3D annotated data for RGB-D coating perception. Ablation studies validate 
+            the effectiveness of individual modules, while comparative experiments 
+            demonstrate the overall superiority of our system.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/w-a0VwWQvBk?rel=0&showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+    <!-- Figures -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <img src="./static/Website image/architecture.png" alt="Figure 2" style="width: 100%;">
+            <p class="has-text-centered">Architecture of Our Framework</p>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div style="height: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+              <img src="./static/Website image/SFRM.png" alt="Figure 3" style="width: 100%;">
+              <p class="has-text-centered">SFRM</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div style="margin-top: 100px;">
+              <img src="./static/Website image/APTM.png" alt="Figure 4" style="width: 100%;">
+              <p class="has-text-centered">APTM</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Figures -->
+
+    <!-- More Figures -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <img src="./static/Website image/2d.png" alt="Figure 5" style="width: 100%;">
+            <p class="has-text-centered">The results of 2D-SSCN</p>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <img src="./static/Website image/3d.png" alt="Figure 6" style="width: 100%;">
+            <p class="has-text-centered">The results of 3D-SRTN</p>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <img src="./static/Website image/experiment.png" alt="Figure 7" style="width: 100%;">
+            <p class="has-text-centered">Real-world Experiments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ More Figures -->
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          
+          <p>
+            Page template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
